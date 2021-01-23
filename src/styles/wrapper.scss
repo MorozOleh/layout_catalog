@@ -1,8 +1,10 @@
+@import "variables";
+
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 48px;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: $margin-centered-horizontal;
   padding: 0 40px;
 }

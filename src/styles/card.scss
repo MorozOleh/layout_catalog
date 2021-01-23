@@ -2,7 +2,7 @@
 
 .main {
   &__card {
-    margin-bottom: 50px;
+    margin-bottom: $margin-bottom-fifty;
   }
 }
 
@@ -17,7 +17,7 @@
     width: 160px;
     height: 134px;
     margin: 30px 19px 0;
-    transition: transform 1s;
+    transition: transform 1s linear;
 
     &:hover {
       transform: scale(1.25) translate(0, -12px);
@@ -41,13 +41,16 @@
   }
 
   &__rating {
-    @include flex-JSB-AC;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    @include jContBetween-aItemCenter;
     margin: 15px 14px 0;
   }
 
   &__price {
     margin: 20px 14px 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     justify-content: space-between;
     align-items: baseline;
   }
@@ -63,7 +66,6 @@
     font-size: $large-font-size;
     font-weight: $font-weight-bold;
     line-height: 19px;
-    margin: 0;
   }
 
   &__link {
@@ -73,13 +75,14 @@
 
     font-size: $middle-font-size;
     font-weight: $font-weight-bold;
-    text-transform: uppercase;
     line-height: 17px;
     color: $white-color;
-    text-decoration: none;
     background-color: $active-color;
     border: 1px solid $active-color;
     border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+
     transition: all 1s;
 
     &:hover {

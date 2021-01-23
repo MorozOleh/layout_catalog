@@ -5,17 +5,14 @@
 }
 
 .stars {
-  display: flex;
-}
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  column-gap: 4px;
 
-.stars__star {
-  width: 15px;
-  height: 15px;
-  margin-right: 4px;
-  background: url("../images/star.svg") no-repeat center;
-
-  &:last-child {
-    margin-right: 0;
+  &__star {
+    width: 15px;
+    height: 15px;
+    background: url("../images/star.svg") no-repeat center;
   }
 }
 
