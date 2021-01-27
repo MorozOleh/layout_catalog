@@ -83,7 +83,7 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    transition: all 1s;
+    transition: color 1s, background-color 1s;
 
     &:hover {
       color: $active-color;
