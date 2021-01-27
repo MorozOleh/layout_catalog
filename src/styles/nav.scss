@@ -3,24 +3,24 @@
 
 .nav {
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: $header-height;
     align-items: center;
-    height: $header-height;
+    column-gap: 20px;
   }
 
   &__item {
-    margin-left: 20px;
-  }
-
-  &__item:first-child {
-    margin-left: 0;
+    display: inline-block;
   }
 
   &__link {
     padding: 23px 0;
 
-    color: #000;
+    color: $black-color;
     text-decoration: none;
+
+    transition: color 1s;
   }
 
   &__link:hover {

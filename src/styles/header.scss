@@ -2,9 +2,14 @@
 @import "mixins";
 
 .header {
-  @include flex-JSB-AC;
-  height: $header-height;
+  display: grid;
+  grid-template-columns: [logo] $width-logo [navigation] 1fr;
+  grid-template-rows: $header-height;
+  justify-items: end;
+  align-items: center;
+
   padding: 0 50px;
-  margin-bottom: 50px;
+  margin-bottom: $margin-bottom-fifty;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
