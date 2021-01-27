@@ -2,9 +2,12 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 200px);
   column-gap: 48px;
   max-width: 1024px;
-  margin: $margin-centered-horizontal;
-  padding: 0 40px;
+  justify-content: center;
+
+  &__main {
+    margin: 0 auto;
+  }
 }
